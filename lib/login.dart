@@ -1,5 +1,6 @@
 import 'package:eteee/acceuil/page1/pageone.dart';
 import 'package:eteee/password.dart';
+import 'package:eteee/sign_up_page.dart';
 import 'package:flutter/material.dart';
 
 class Login extends StatefulWidget {
@@ -192,7 +193,13 @@ class _LoginState extends State<Login> {
                         fontWeight: FontWeight.bold,
                         color: Colors.white
                     ),),),
-                    TextButton(onPressed: (){}, child:Text("Sign Up",style: TextStyle(
+                    TextButton(onPressed: (){
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => SignUpPage()),
+                      );
+
+                    }, child:Text("Sign Up",style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 20,
                       color: Color(0xFFEECD5C)

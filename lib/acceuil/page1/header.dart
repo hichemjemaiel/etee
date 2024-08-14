@@ -4,6 +4,8 @@ import 'package:eteee/acceuil/page1/retraits.dart';
 import 'package:eteee/acceuil/page1/transactions.dart';
 import 'package:flutter/material.dart';
 
+import '../../stats_page.dart';
+
 class Header extends StatefulWidget {
   const Header({super.key});
 
@@ -69,7 +71,8 @@ class _HeaderState extends State<Header> {
     return GestureDetector(
       onTapDown: (_) {
         setState(() {
-          _animatedColor = Colors.green; // Change color to green on tap down
+          _animatedColor = Colors.green;
+          Navigator.push(context, MaterialPageRoute(builder: (context)=>StatsPage()));// Change color to green on tap down
         });
       },
       onTapUp: (_) {
